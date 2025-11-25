@@ -63,7 +63,7 @@ export default function Home() {
     userId: string,
   ) => {
     try {
-      const response = await fetch(`http://${process.env.NEXT_PUBLIC_BACKEND_ADDRESS}/api/v1/token`, {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_ADDRESS}/api/v1/token`, {
         method,
         headers: { "Content-Type": "application/json", "X-Api-Key": process.env.NEXT_PUBLIC_BACKEND_API_KEY! },
         body: JSON.stringify({ token: tokenValue, user_id: userId }),
